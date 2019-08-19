@@ -10,5 +10,5 @@
 ## Papéis da equipe: 
 * Matheus Cavagnari - Tester/Programador 
 * Jorge Igor A. R. Silva - Programador/Designer 
-* Bredow E. - Programador
+* Bredow E. - Programador/Designer
                      
