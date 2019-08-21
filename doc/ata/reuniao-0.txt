@@ -1,0 +1,13 @@
+ATA DE REUNIÃO
+No dia 05/08/2019 as 19:10 foi realizada uma reunião e definido o grupo que será composto por Matheus cavagnari, brendow e. r., Jorge Igor.
+	Foi definido como papéis 
+•	Matheus Cavagnari – Tester/Programador
+•	Jorge Igor – Programador/Designer
+•	Brendow E. – Programador/
+Foi definido que a licença será open source, para que outras pessoas que queiram implementar de diferentes maneiras tenham a liberdade para o mesmo.
+
+Participantes da reunião	 
+	Brendow E. R., Jorge Igor A. R. S., Matheus Cavagnari
+Tópicos discutidos
+Foi definido qual será o projeto, uma concepção prévia de como será o funcionamento do mesmo, definido quais serão os papéis dos integrantes que constituem o grupo
+
