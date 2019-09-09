@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="_css/format.css" />
+    <link rel="stylesheet" type="text/css" href="_css/estilo_login.css" />
+    <title> - Login</title>
+</head>
+
+<body>
+    <div id="id_interface">
+        <header id="cabecalho">
+            <nav id="menu">
+                <ol>
+                    <li> <a href="index.html"> HOME </a> </li>
+                    <li> <a href="pesquisar.html"> PESQUISAR </a> </li>
+                    <li id="btn_login"> <a href="login.html"> LOGIN </a> </li>
+                </ol>
+                <input type="text" name="Pesquisar" placeholder=" Pesquisar" id="txtFld_pesquisar" />
+                <img src="_imagens/loupe.png"> <!-- AQUI VAI UM ONCLICK-->
+            </nav>
+        </header>
+
+        <section id="id_login">
+            <!-- SECTION PRINCIPAL-->
+            <div id="dv_entrar">
+                <!--       
+                <ul>
+                   <li> <label for="txtFld_log_email"> Email <br /> </label> <input type="email" placeholder="seu email" name="email" id="txtFld_log_email">  </li>
+                   <li> <label for="txtFld_log_senha"> Senha <br /> </label> <input type="password" placeholder="8 digitos" name="txtFld_senha" id="txtFld_log_senha"> </li>
+                    <p> <a href="senha.html"> esquici minha senha </a> </p>
+                </ul>
+-->
+
+                <fieldset>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><label for="txtFld_log_email"> Email <br /> </label> <input type="email"
+                                        placeholder=" Seu email" name="email" id="txtFld_log_email"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="txtFld_log_senha"> Senha <br /> </label> <input type="password"
+                                        placeholder=" 8 digitos" name="txtFld_senha" id="txtFld_log_senha"></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <p> <a href="senha.html"> Esquici minha senha </a> </p>
+                </fieldset>
+
+            </div>
+
+
+            <div id="dv_registro">
+                <ul>
+                    <li> <button> Login com Facebook</button> </li>
+                    <li> <button> Login com Google</button> </li>
+                    <li> <button onclick="location.href = 'registro.html'"> Registrar-se</button> </li>
+                    <!-- melhor maneira ???-->
+                </ul>
+            </div>
+
+        </section>
+
+
+
+        <footer id="rodape">
+            Facebook twitter About us work with us
+        </footer>
+    </div>
+</body>
+
+
+
+
+</html>

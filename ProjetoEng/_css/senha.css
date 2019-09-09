@@ -1,0 +1,27 @@
+
+
+section#sctn_sen_senha{
+    margin: 30px auto 30px auto;
+    width: 300px;
+    height: 400px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 2px 2px 2px 2px rgb(151, 147, 147);
+    padding: 10px;
+}
+
+input{
+    width: 200px;
+}
+
+section#sctn_sen_senha ul{
+    list-style: none;
+}
+
+section#sctn_sen_senha button{
+    position: relative;
+    top: 50px;
+    left: 90px;
+    width: 120px;
+    height: 30px;
+}
