@@ -9,7 +9,7 @@ A interação teve início em 02/09 se estendendo até 09/09.
 *	Brendow e Jorge Igor ficaram responsáveis por achar um bom nome para o projeto e criar uma logo.
 ## 3. Atividades realizadas
 ### 3.1 Atividade e responsável
-*	Criado um modelo prévio de classes para o projeto por Matheus Cavagnari.ww
+*	Criado um modelo prévio de classes para o projeto por Matheus Cavagnari.
 *	Foi escolhido um nome para o projeto e criado uma logo por Jorge Igor. 
 *	As histórias de usuárias foram revisadas e melhoradas por Brendow E. R.
 ## 4. Atividades não realizadas
