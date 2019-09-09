@@ -1,1 +1,7 @@
+ATA DA REUNIÃO 2
+No dia 02/09/2019 as 19:05 foi realizada uma reunião.
+Participantes da reunião
+Brendow E. R., Jorge Igor A. R. Silva
+Tópicos discutidos
+	Discutido e definido o nome e domínio do sistema, discutido sobre a logo do sistema e também discutido sobre o CRUD disponibilizado pelo professor para a utilização do mesmo.
 
