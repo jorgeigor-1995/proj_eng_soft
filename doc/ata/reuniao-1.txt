@@ -1,0 +1,7 @@
+ATA DE REUNIÃO 1
+	No dia 19/08 foi realizada uma reunião.
+Participantes da reunião
+	Brendow E. R., Matheus Cavagnari e Jorge Igor A. R. Silva
+Tópicos discutidos
+Foi discutido sobre as interfaces do projeto, definido as classes e optado pela utilização do sgdb mongodb, discutido sobre algumas features que seriam adicionados ao site e tomadas notas das mesma, com a orientação do professor também ficou de se verificar sobre a licença de distribuição que havia sido escolhida e qual seria o “por quê” do projeto.
+
