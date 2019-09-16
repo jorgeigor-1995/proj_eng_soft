@@ -1,7 +1,7 @@
 {
-  "name": "projeto-node-es",
-  "version": "0.3.0",
-  "description": "Exemplo de projeto de Engenharia de software com Node.js usando Express 4",
+  "name": "projeto-eng",
+  "version": "0.0.1",
+  "description": "Projeto de engenharia de software usando node",
   "engines": {
     "node": "10.x"
   },
@@ -31,14 +31,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/engenhariadesoftware/projetoNodeES"
+    "url": "https://github.com/jorgeigor-1995/proj_eng_soft"
   },
   "keywords": [
-    "node",
-    "heroku",
-    "express",
-    "ES",
-    "Projeto"
+    "livros",
+    "filmes",
+    "series",
+    "sugestoes"
   ],
   "license": "MIT"
 }
