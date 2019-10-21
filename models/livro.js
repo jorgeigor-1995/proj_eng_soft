@@ -2,7 +2,7 @@ module.exports = function (express) {
     var Schema = require('mongoose').Schema;
     var livro = Schema({
         nome: { type: String, required: true },
-        capitulo: { type: String, required: true },// tem que ser integer
+     //capitulo: { type: String, required: true },// tem que ser integer
         autor: { type: String, required: true },
         genero: { type: String, required: true },
         sinopse: { type: String, required: true },
