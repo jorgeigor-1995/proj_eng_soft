@@ -5,24 +5,24 @@ module.exports = function (app) {
         index: function (req, res) {
             app.models.filme.find(function (erro, filme) {
                 var resultado = { filmes: filme };
-                res.render('filmes/index', resultado);
+                res.render('filme/index', resultado);
             });
         },
         create: function (req, res) {
-            res.render('filmes/create', { filmes: {} });
+            res.render('filme/create', { filmes: {} });
         },
         store: function (req, res) {
             const errors = validationResult(req);
             if (!errors.isEmpty()) {
                 var resultado = { errors: errors.array(), filmes: req.body.filme };
-                res.render('filmes/create', resultado);
+                res.render('filme/create', resultado);
                 return;
             }
             var dados = req.body.filme;
 
             var filme = new app.models.filme(dados);
             filme.save(function () {
-                req.flash('success', 'Filme salvo!', '/filmes');
+                req.flash('success', 'Filme salvo!', '/filme');
             });
         },
         show: function (req, res) {
@@ -36,7 +36,7 @@ module.exports = function (app) {
                     return;
                 }
                 var resultado = { filmes: filme };
-                res.render('filmes/edit', resultado);
+                res.render('filme/edit', resultado);
             });
         },
         update: function (req, res) {
@@ -44,7 +44,7 @@ module.exports = function (app) {
             if (!errors.isEmpty()) {
                 req.body.filme._id = req.params.id;
                 var resultado = { errors: errors.array(), filmes: req.body.filme };
-                res.render('filmes/edit', resultado);
+                res.render('filme/edit', resultado);
                 return;
             }
             var _id = req.params.id;
@@ -58,14 +58,14 @@ module.exports = function (app) {
                 filme.duracao = req.filme.duracao;
                 
                 contato.save(function () {
-                    req.flash('success', 'Filme atualizado!', '/filmes');
+                    req.flash('success', 'Filme atualizado!', '/filme');
                 });
             });
         },
         destroy: function (req, res) {
             var _id = req.params.id;
             app.models.filme.deleteOne({ _id: _id }, function (erro) {
-                req.flash('success', 'Filme apagado!', '/filmes');
+                req.flash('success', 'Filme apagado!', '/filme');
             });
         },
         validate: [
