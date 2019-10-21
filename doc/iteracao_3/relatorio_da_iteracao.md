@@ -1,26 +1,29 @@
 # Relatório da iteração 3
 Relatório das lições aprendidas de cada iteração: o que funcionou, o que não funcionou e o que deve ser melhorado na próxima iteração.
 ## 1. Período da iteração
-A interação teve início em 30/09 se estendendo até 14/10.
+A interação teve início em 30/09 se estendendo até 21/10.
 ## 2. Atividades planejadas
 ### 2.1 Atividade e responsável
-*	Matheus Cavagnari ficou responsável pelo desenvolvimento de testes.
-*	Brendow E. R. e Jorge Igor A. ficaram responsáveis pelo desenvolvimento front-end e back-end do projeto.
-
+*	Matheus Cavagnari e Jorge Igor, ficaram responsáveis pelo desenvolvimento de testes.
+*	Brendow evangelista ficou responsável por ajustar o front-end de acordo com padrão MVC e utilização de express.
 ## 3. Atividades realizadas
+*	Testes foram criados para verificação de registro de usuário.
 ### 3.1 Atividade e responsável
-*	Criado um modelo prévio de classes para o projeto por Matheus Cavagnari.
-*	Foi escolhido um nome para o projeto e criado uma logo por Jorge Igor. 
-*	As histórias de usuárias foram revisadas e melhoradas por Brendow E. R.
+*	Criado um modelo de dados por Matheus Cavagnari.
 ## 4. Atividades não realizadas
+*	Ajustar projeto com o padrão MVC.
 ### 4.1 Atividade, responsável e motivo do impedimento
-*	Foi realizado o primeiro deploy do projeto, tendo como responsável Brendow E. R., tendo como motivo que como ainda não foi realizado uma parte substancial da implementação do projeto foi optado por não realizar um deploy.
-*	Não foi criado nenhum teste para o projeto, tendo como responsável Matheus Cavagnari e motivo que ainda não foi realizada uma parte substancial do projeto.
+*	Não foi realizado o ajuste para o padrão MVC, tendo como responsável Brendow E. R., 
 ## 5. Atividades da próxima iteração
+*	Implementar mais testes.
+*	Ajustar rotas do projeto e organizar o padrão MVC.
 ### 5.1 Atividade e responsável
 *	Matheus Cavagnari será responsável pela criação de testes.
-*	Matheus Cavagnari e Jorge Igor A. R. Silva serão responsáveis por revisar e melhor as classes do projeto.
-*	Brendow E. R. será responsável por realizar um deploy da aplicação.
+*	Matheus Cavagnari e Jorge Igor A. R. Silva serão responsáveis por revisar e ajustar o projeto no padrão MVC.
 ## 6. Licões aprendidas
+*	O funcionamento do MVC.
+*	Configuração da aplicação com ao atlas.
+*	A utilização do express.
+
 
 
