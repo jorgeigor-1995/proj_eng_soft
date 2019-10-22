@@ -5,24 +5,24 @@ module.exports = function (app) {
         index: function (req, res) {
             app.models.livro.find(function (erro, livro) {
                 var resultado = { livros: livro };
-                res.render('livros/index', resultado);
+                res.render('livro/index', resultado);
             });
         },
         create: function (req, res) {
-            res.render('livros/create', { filmes: {} });
+            res.render('livro/create', { filmes: {} });
         },
         store: function (req, res) {
             const errors = validationResult(req);
             if (!errors.isEmpty()) {
                 var resultado = { errors: errors.array(), livros: req.body.livro };
-                res.render('livros/create', resultado);
+                res.render('livro/create', resultado);
                 return;
             }
             var dados = req.body.livro;
 
             var livro = new app.models.livro(dados);
             livro.save(function () {
-                req.flash('success', 'Livro salvo!', '/livros');
+                req.flash('success', 'Livro salvo!', '/livro');
             });
         },
         show: function (req, res) {
@@ -36,7 +36,7 @@ module.exports = function (app) {
                     return;
                 }
                 var resultado = { livros: livro };
-                res.render('livros/edit', resultado);
+                res.render('livro/edit', resultado);
             });
         },
         update: function (req, res) {
@@ -44,7 +44,7 @@ module.exports = function (app) {
             if (!errors.isEmpty()) {
                 req.body.livro._id = req.params.id;
                 var resultado = { errors: errors.array(), livros: req.body.livro };
-                res.render('livros/edit', resultado);
+                res.render('livro/edit', resultado);
                 return;
             }
             var _id = req.params.id;
@@ -59,14 +59,14 @@ module.exports = function (app) {
                 //livro.capitulos = req.body.livro.capitulos;
                 
                 contato.save(function () {
-                    req.flash('success', 'Livro atualizado!', '/livros');
+                    req.flash('success', 'Livro atualizado!', '/livro');
                 });
             });
         },
         destroy: function (req, res) {
             var _id = req.params.id;
             app.models.livro.deleteOne({ _id: _id }, function (erro) {
-                req.flash('success', 'Livro apagado!', '/livros');
+                req.flash('success', 'Livro apagado!', '/livro');
             });
         },
         validate: [
