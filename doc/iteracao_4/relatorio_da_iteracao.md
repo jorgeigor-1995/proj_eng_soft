@@ -1,7 +1,7 @@
-# Relatório da iteração 1
+# Relatório da iteração 4
 Relatório das lições aprendidas de cada iteração: o que funcionou, o que não funcionou e o que deve ser melhorado na próxima iteração.
 ## 1. Período da iteração
-A interação teve início em 02/09 se estendendo até 09/09.
+A interação teve início em 11/11 se estendendo até 25/11.
 ## 2. Atividades planejadas
 ### 2.1 Atividade e responsável
 *	Matheus Cavagnari ficou responsável pelo desenvolvimento de testes.

@@ -1,3 +1,4 @@
+/*
 module.exports = function (express) {
     var Schema = require('mongoose').Schema;
     var serie = Schema({
@@ -9,9 +10,7 @@ module.exports = function (express) {
         temporada: { type: String, required: true }, // tem que ser integer
         episodios: { type: String, required: true }, // tem que ser integer
         lancamento: { type: String, required: true }
-
-
-        //obs: procurar sobre inserir capitulos como um todo
     });
     return global.db.models.serie || global.db.model('serie', serie);
 };
+*/

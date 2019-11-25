@@ -4,14 +4,26 @@ module.exports = function (app) {
     var FilmeController = {
         index: function (req, res) {
             app.models.filme.find(function (erro, filme) {
-                var resultado = { filmes: filme };
+                var resultado = { filme: filme };
                 res.render('filme/index', resultado);
             });
         },
         create: function (req, res) {
-            res.render('filme/create', { filmes: {} });
+            res.render('filme/create', { filme: {} });
+            var dados = req.body.filme;
+            filme = new app.models.filme(dados);
+            filme.save(function (err) {
+            if (err) {
+                console.log("Error! " + err.message);
+                return err;
+            }
+            else {
+                console.log("Created movie");
+                res.redirect('/');
+            }
+        });
         },
-        store: function (req, res) {
+        /*store: function (req, res) {
             const errors = validationResult(req);
             if (!errors.isEmpty()) {
                 var resultado = { errors: errors.array(), filmes: req.body.filme };
@@ -24,8 +36,8 @@ module.exports = function (app) {
             filme.save(function () {
                 req.flash('success', 'Filme salvo!', '/filme');
             });
-        },
-        show: function (req, res) {
+        },*/
+        /*show: function (req, res) {
             //
         },
         edit: function (req, res) {
@@ -35,7 +47,7 @@ module.exports = function (app) {
                     res.sendStatus(404)
                     return;
                 }
-                var resultado = { filmes: filme };
+                var resultado = { filme: filme };
                 res.render('filme/edit', resultado);
             });
         },
@@ -67,11 +79,11 @@ module.exports = function (app) {
             app.models.filme.deleteOne({ _id: _id }, function (erro) {
                 req.flash('success', 'Filme apagado!', '/filme');
             });
-        },
+        },*/
         validate: [
             check('filme[nome]', 'Campo nome é obrigatório').not().isEmpty(),
-            check('filme[sinopse]', 'Campo sinopse é obrigatório').not().isEmpty()
+            check('filme[ano]', 'Campo sinopse é obrigatório').not().isEmpty()
         ]
-    }
+    };
     return FilmeController;
 };
