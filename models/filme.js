@@ -1,6 +1,11 @@
 module.exports = function (express) {
     var Schema = require('mongoose').Schema;
     var filme = Schema({
+        capa:{//Sava no banco o url da imagem
+            type: String,
+            require: true,
+            trim: true
+        },
         nome: { type: String, required: true },
         diretor: { type: String, required: true },
         genero: { type: String, required: true },
