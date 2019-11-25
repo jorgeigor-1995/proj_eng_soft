@@ -1,43 +1,39 @@
 {
-  "name": "projeto-eng",
-  "version": "0.0.1",
-  "description": "Projeto de engenharia de software usando node",
-  "engines": {
-    "node": "10.x"
-  },
+  "name": "Mentions-api",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "mocha tests/*.js --exit"
-  },
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "chai": "^4.2.0",
-    "chai-http": "^4.3.0",
-    "consign": "^0.1.6",
-    "dotenv": "^8.1.0",
-    "ejs": "^2.5.6",
-    "express": "^4.17.1",
-    "express-flash-notification": "^0.5.0",
-    "express-session": "^1.16.2",
-    "express-validator": "^6.1.1",
-    "method-override": "^3.0.0",
-    "mocha": "^6.2.0",
-    "mongoose": "^5.6.8"
-  },
-  "devDependencies": {
-    "request": "^2.81.0",
-    "tape": "^4.7.0"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node node_modules/nodemon/bin/nodemon bin/server",
+    "start": "nodemon bin/server"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jorgeigor-1995/proj_eng_soft"
+    "url": "git+https://github.com/venonh2/Mentions-api.git"
   },
-  "keywords": [
-    "livros",
-    "filmes",
-    "series",
-    "sugestoes"
-  ],
-  "license": "MIT"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/venonh2/Mentions-api/issues"
+  },
+  "homepage": "https://github.com/venonh2/Mentions-api#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.7",
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "cookie-parser": "^1.4.4",
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "express-validator": "^6.2.0",
+    "mongoose": "^5.7.5",
+    "session": "^0.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
 }

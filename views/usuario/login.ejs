@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="icon"  href="https://i.ibb.co/5kX6vJr/tehei-icon.jpg" alt="tehei-icon">
+    <link rel='stylesheet' href='../css/loginregister.css' />
+
+
+</head>
+
+
+<body>
+    <main>
+        <header>
+            <% include ../header.ejs %>
+        </header>
+        <section>
+            <div id="register">
+                <h1 class="title"> Acessar</h1>
+                <form action="/usuario/login" method="POST">
+                  
+                    <label for="cEmail"> Email: </label><input id="cEmail" class="txtFld_user" type="text" name="email" placeholder="Seu Email">
+                    <br>
+                   
+                    <label for="cSenha"> Senha: </label><input id="cSenha" class="txtFld_user" type="password" name="senha"
+                        placeholder="Sua senha">
+                    <br>
+            
+                    <button class="btn_user" type="submit">Confirmar </button>
+
+                </form>
+            </div>
+
+
+    </main>
+
+    <footer>
+        <% include ../footer.ejs %>
+    </footer>
+</body>
+
+</html>
