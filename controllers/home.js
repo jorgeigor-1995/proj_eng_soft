@@ -5,6 +5,9 @@ module.exports = function (app) {
         index: function (req, res) {
             res.render('home/index');
         },
+        sinopse: function (req, res) {
+            res.render('sinopse/index');
+        }, 
        
     }; 
     return HomeController;
