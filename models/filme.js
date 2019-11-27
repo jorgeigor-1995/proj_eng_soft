@@ -21,5 +21,12 @@ module.exports = function (express) {
             trim: true
         }
     });
+
+    
     return global.db.model('filme', filme);
 }; 
+
+
+function findAll(callback){  
+    global.db.collection("filme").find({}).toArray(callback);
+}
