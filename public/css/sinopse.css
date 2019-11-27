@@ -1,0 +1,29 @@
+
+.quadro{
+    width: 900px;
+    height: 400px;
+    box-shadow: 2px 2px 3px rgb(97, 92, 92);
+    position: absolute; 
+    display: flex;
+    margin-left: 100px;
+    padding: 1em;
+}
+
+.imagem{
+    margin-top: 50px;
+    width: 240px;
+    height: 320px;
+    box-shadow: 2px 2px 3px rgb(97, 92, 92);
+   
+}
+
+.sinopse{
+    margin-top: 50px;
+    flex-grow: 1;
+    box-shadow: 2px 2px 3px rgb(97, 92, 92);
+    background: saddlebrown;
+    float: right;
+    width: 500px;
+    height: 320px;
+}
+
