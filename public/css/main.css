@@ -9,7 +9,7 @@ header#cabecalho{
     height: 80px;
     background-image: url('../_imagens/new.jpeg');
     background-repeat: no-repeat;
-    box-shadow: 2px 2px 2px rgba(167, 165, 165, 0.781);
+    box-shadow: 2px 2px 2px 1px rgba(68, 66, 66, 0.781);
 }
 
 header#cabecalho img{ 
