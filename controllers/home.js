@@ -5,11 +5,6 @@ module.exports = function (app) {
 
     let HomeController = {
         index: function (req, res) {
-            var drinks = [
-            { nome: 'Bloody Mary', capa: 3 },
-            { nome: 'Martini', capa: 5 },
-            { nome: 'Scotch', capa: 10 }
-            ];
             const Filmes = mongoose.model("filme");
             Filmes.find({}, (err, response) => {
                 if(err) res.send(err);
