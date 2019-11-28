@@ -6,7 +6,7 @@ div#register{ /* para a div de registro e para a div de login*/
     height: 300px;
     background-color: rgba(34, 9, 9, 0.2);
     padding: 10px;
-    box-shadow: 1px 1px 1px rgb(151, 147, 147);
+    box-shadow: 1px 1px 1px  rgb(151, 147, 147);
 }
 
 .txtFld_user{ /*os txt de noem senha etc*/
@@ -37,6 +37,8 @@ div#register{ /* para a div de registro e para a div de login*/
 
 .btn_user:hover{
     background-color:  rgba(31, 95, 114, 0.938);
+    box-shadow: 1px 1px 1px rgb(151, 147, 147);
+    transition: 1s;
 }
 
 
