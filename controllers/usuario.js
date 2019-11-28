@@ -8,19 +8,20 @@ module.exports = function (app) {
 
     var UsuarioController = { // não utilizavel
        login: function (req, res) {
-            res.render('usuario/login');
+            res.render('usuario/login', { message: ''});
     
         }, 
 
         sing_up: function(req, res){
-            res.render('usuario/create');
+            res.render('usuario/create', { message: ''});
         },
         create: function (req, res) {
             if(req.body.email && req.body.senha){
                 Usuario.findOne({'email': req.body.email })
                     .then(user => {
                         if(user) {
-                            res.json({ success: false, message:"Esse email já esta em uso"});
+                            //res.json({ success: false, message:"Esse email já esta em uso"});
+                            res.render('usuario/create', { message: "Esse email já esta em uso!"});
                         }else{
                             bcrypt.hash(req.body.senha, 8)
                                 .then(hash => {
@@ -43,7 +44,8 @@ module.exports = function (app) {
                         }
                     })
             }else{
-                res.json({ success: false, message: "Campos nome, email e senha são requeridos", statusCode: 400});
+                //res.json({ success: false, message: "Campos nome, email e senha são requeridos", statusCode: 400});
+                res.render('usuario/create', { message: "Campos vazios requeridos!"});
             }
               
         }, // teste 
@@ -57,9 +59,10 @@ module.exports = function (app) {
                 .then(function(samePassword) {
                     console.log(String(samePassword));
                     if(!samePassword) {
+                        res.render('usuario/login', { message: "Senha incorreta!"});
                         req.session.destroy();
                         console.log("Senha incorreta");
-                        res.status(403).send();
+                        
                     }else{
                     res.render('usuario/logado');
                     console.log("A combinação email e senha são corretos!" );
@@ -68,12 +71,13 @@ module.exports = function (app) {
                     
                 })
                 .catch(function(error){
-                    res.json({ success: false, message:"Esse email não está cadastrado"});
+                    //res.json({ success: false, message:"Esse email não está cadastrado"});
+                    res.render('usuario/login', { message: "Esse email não está cadastrado!"});
                     console.log("Error authenticating user: ");
                     console.log(error);
                 });
             }else {
-                    res.redirect('/');
+                    res.render('usuario/login', { message: "Os campos de login são requisitados!"});
             }
         }, 
 

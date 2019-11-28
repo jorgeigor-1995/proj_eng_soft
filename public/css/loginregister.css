@@ -22,3 +22,9 @@ div#register{ /* para a div de registro e para a div de login*/
 .title{
     margin-left: 100px;
 }
+
+#erro{
+    background-color: rgba(143, 142, 142, 0.664);
+    color: brown;
+    text-align: center;
+}
