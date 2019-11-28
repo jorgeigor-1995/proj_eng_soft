@@ -2,6 +2,7 @@
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 const Usuario = mongoose.model('usuario');
+const { check, validationResult } = require('express-validator'); // aaaaa
 
 module.exports = function (app) {
     //var Usuario = app.models.usuario;
@@ -16,11 +17,14 @@ module.exports = function (app) {
             res.render('usuario/create');
         },
         create: function (req, res) {
+            const errors = validationResult(req); /// aaaaaa
+            var resultado = { errors: errors.array(), usuario: req.body.usuario }; // aaaaaa
             if(req.body.email && req.body.senha){
                 Usuario.findOne({'email': req.body.email })
                     .then(user => {
                         if(user) {
                             res.json({ success: false, message:"Esse email já esta em uso"});
+                            
                         }else{
                             bcrypt.hash(req.body.senha, 8)
                                 .then(hash => {
@@ -85,7 +89,14 @@ module.exports = function (app) {
             req.session.destroy();
             res.redirect('/usuario/login');
         },
+
+        validate: [ // aaaaaaa
+            check('usuario[email]', 'O email deve ser válido').isEmail(),
+            check('usuario[nome]', 'Campo nome é obrigatório').not().isEmpty(),
+            check('usuario[senha]', 'Campo sobrenome é obrigatório').not().isEmpty()
+        ]
        
     }
+    
     return UsuarioController;
 }
