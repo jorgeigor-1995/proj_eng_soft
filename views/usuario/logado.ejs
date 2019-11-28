@@ -9,28 +9,30 @@
     <link rel="icon"  href="https://i.ibb.co/5kX6vJr/tehei-icon.jpg" alt="tehei-icon">
     <link rel='stylesheet' href='../css/loginregister.css' />
     <link rel='stylesheet' href='../css/user.css' />
+    <link rel="stylesheet" href="../css/home.css" />
 </head>
 
 <body>
-   <main>
-       <header id="cabecalho">
-            <nav id="menu">
-                <ol>
-                    <li> <a href="/"> HOME </a> </li>
-                    <li id="btn_login"> <a href="/usuario/sair"> Sair </a> </li>
-                    <li > <a>  Bem - vindo </a> </li>
-                </ol>
-               
-              <!--  <img src="_imagens/loupe.png">  AQUI VAI UM ONCLICK--> 
-            </nav>
-        </header>
-        <ul id:"user_menu">
-              <li class="liMenu"><a href="/">Home</a></li>
-              <li class="liMenu"><a href="../../filme/create">Adicionar Filme</a></li>
-              <li class="liMenu"><a href="contact.asp">Contact</a></li>
-              <li class="liMenu"><a href="/usuario/sair">Sair</a></li>
-        </ul>
-
+   <main id="bodyMain">
+       <div id="tela">
+            <header id="cabecalho">
+                <nav id="menu">
+                    <ol>
+                        <li> <a href="/"> HOME </a> </li>
+                        <li id="btn_login"> <a href="/usuario/sair"> Sair </a> </li>
+                        <li > <a>  Bem - vindo </a> </li>
+                    </ol>
+                
+                <!--  <img src="_imagens/loupe.png">  AQUI VAI UM ONCLICK--> 
+                </nav>
+            </header>
+            <ul id:"user_menu">
+                <li class="liMenu"><a href="/">Home</a></li>
+                <li class="liMenu"><a href="../../filme/create">Adicionar Filme</a></li>
+                <li class="liMenu"><a href="contact.asp">Contact</a></li>
+                <li class="liMenu"><a href="/usuario/sair">Sair</a></li>
+            </ul>
+        </div>
     </main>
 <footer>
     <% include ../footer.ejs %>

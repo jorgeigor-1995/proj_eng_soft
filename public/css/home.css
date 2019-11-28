@@ -1,27 +1,48 @@
-#container{
-	margin: 0px auto 25px auto;
-    width: 1250px;/* 1250 */
-    height: 1000px;
+* {
+    margin: 0;
+    padding:0;
+}
+
+#bodyMain {
+    overflow: hidden;
+    width: 100%; /* com isso imagem ocupará toda a largura da tela. Se colocarmos height: 100% também, a imagem irá distorcer */
+    position: absolute;
+    background-image: url('https://i.ibb.co/vhHMcsk/51283wide.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.container {
+    width: 1000px;
+    height: 2000px;
+    position: relative;
+    right: 100px;
+	margin: 0px auto 0px auto;
+    background-color: rgba(99, 132, 150, 0.884);
+    background-repeat: no-repeat;
+    box-shadow: 2px 2px 2px rgba(167, 165, 165, 0.781);
 }
 
 
 #topo {
     position: relative;
-    right: 125px;
-	margin: -10px auto 25px auto;
+	margin: 0px auto 25px auto;
     width: 950px;/* 1250 */
     height: 40px;
-    background-color: #069AEB;
+    background-color: rgb(5, 116, 175);
     box-shadow: 2px 2px 2px rgba(167, 165, 165, 0.781);
 }
 
 #topo span .see-all{
     position: relative; 
     width: 40px;
-    bottom: 40px;
+    font-size: 18px;
+    bottom: 20px;
     left: 880px;
     color: black;
-    background-color: #1A478E;
+    background-color: rgb(0, 51, 75);
 }
 
 
@@ -29,7 +50,7 @@
 h2{
     width: 95px;/* 1250 */
     height: 30px;
-    background-color: #1A478E;
+    background-color:  rgb(0, 51, 75);
 	position: relative;
 	padding-left: 5px;
 	left: 15px;
@@ -39,19 +60,18 @@ h2{
 
 .items{
     position: relative;
-    bottom: 25px;
-    right: 20px;
+    bottom: 20px;
+    background-color: rgb(59, 68, 88);
 	margin: auto auto 0 auto;
     width: 950px;/* 1250 */
-    height: 1200px;
+    height: 400px;
 }
 
 .movie{
     position: relative;
     margin: 10px 5px 10px 5px;
-    right: 100px;
-    width: 105px;
-    height: 140px;
+    width: 120px;
+    height: 160px;
     background-color: slategray;
     float: left;
 
@@ -59,16 +79,25 @@ h2{
 }
 
 .movie .data h3{
-    font-size: 12px;
+    position: relative;
+    bottom: 2.5px;
+    font-size: 14px;
+    text-align: center;
     margin: auto;
-    padding-left: 20px;
-    background-color: rgb(52, 178, 201);
+    background-color: rgba(74, 75, 80, 0.938);
     font-style: normal;
 }
 
 .movie .poster img{
-    width: 100px;
-    height: 125;
+    width: 115px;
+    height: 140;
     padding-left: 2.5px;
     padding-top: 2.5px;
+}
+
+
+
+.link_data {
+    color: black;
+    font-size: 12;
 }

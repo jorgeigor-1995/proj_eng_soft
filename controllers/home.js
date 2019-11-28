@@ -9,13 +9,16 @@ module.exports = function (app) {
             Filmes.find({}, (err, response) => {
                 if (err) res.send(err);
                 res.render('home/index', {
-                    filmes: response
+                    filmes: response,
+                    results: false,
+                    search: '',
+
                 });
             })
         },
 
 
-        sinopse: function (req, res) {
+        sinopse: function (req, res, next) {
             const Filme = mongoose.model("filme"); //
             Filme.findOne({ '_id': req.params.id }, (err, response) => { //
                 //  if(err) res.send(err);
@@ -23,7 +26,19 @@ module.exports = function (app) {
                     filme: response
                 });
             }) 
-    }
+        },
+        search: function (req, res) {
+            var searchParams = req.query.query.toUpperCase().split(' ');
+            console.log(searchParams);
+            const Filme = mongoose.model("filme");
+            filme.find({ 'nome': { $in: searchParams }}, function(e , docs){
+                res.render('home/search', { 
+                    results: true,
+                    search: req.query.query,
+                    list: docs
+                })
+            })
+        }
 }
         return HomeController;
     };
