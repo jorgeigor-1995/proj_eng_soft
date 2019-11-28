@@ -80,7 +80,7 @@ module.exports = function (app) {
                     console.log(error);
                 });
             }else {
-                    res.render('usuario/login', { message: "Os campos de login são requisitados!"});
+                    res.render('usuario/login', { message: "Email ou senha incorreto!"});
             }
         }, 
 

@@ -1,21 +1,21 @@
 header#cabecalho{
     margin: -14px auto 30px auto;
-    width: 1250px;/* 1250 */
+    width: 1250px;
     height: 80px;
     background-image: url('../_imagens/new.jpeg');
     background-repeat: no-repeat;
     
-   /* background-color: rgb(255, 255, 255); */
+
     box-shadow: 2px 2px 2px rgba(167, 165, 165, 0.781);
 }
 
-header#cabecalho img{ /* a imagem da lupa*/
+header#cabecalho img{ 
     position: relative;
     width: 25px;
     top: -2px;
     left: 602px;
 }
-::placeholder{ /* mudando a cor dos text, esta geral*/
+::placeholder{ 
     color: white;
 
 }
@@ -54,15 +54,15 @@ nav#menu a{
     color: white;
 }
 
-nav#menu li#btn_login{ /* ajustando o botão de login no canto superior*/
-    left: 900px; /* 800 */
+nav#menu li#btn_login{ 
+    left: 900px; 
     border-radius: 10px;
     width: 60px;
     text-align: center;
 }
 
-nav#menu li#btn_sign_up{ /* ajustando o botão de login no canto superior*/
-    left: 905px; /* 800 */
+nav#menu li#btn_sign_up{ 
+    left: 905px; 
     border-radius: 10px;
     width: 75px;
     text-align: center;
@@ -70,7 +70,7 @@ nav#menu li#btn_sign_up{ /* ajustando o botão de login no canto superior*/
 
 
 
-nav#menu input#txtFld_pesquisar{ /* caxa de pesquisa*/
+nav#menu input#txtFld_pesquisar{ 
     position: relative;
     top: 2px;
     background-color:transparent;

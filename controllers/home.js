@@ -16,16 +16,17 @@ module.exports = function (app) {
 
 
         sinopse: function (req, res) {
+            let id = req.params.id;
+       //     console.log(id);
             const Filme = mongoose.model("filme"); //
-            Filme.findOne({ 'capa': req.body.capa }, (err, response) => { //
-               // console.log(Filme.nome)
-                //  if(err) res.send(err);
-                res.render('sinopse/index', {
-                    filme: response
-                });
-            }) 
+            Filme.findById(id, function (err, response) { //
+                // console.log(Filme.nome)
+                if (err) res.send(err);
+                let resultado = { filme: response }
+                res.render('sinopse/index', resultado);
+            });
+        }
     }
-}
-        return HomeController;
-    };
+    return HomeController;
+};
 
