@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding:0;
+}
+
 header#cabecalho{
     margin: -14px auto 30px auto;
     width: 1250px;
@@ -24,8 +29,9 @@ nav#menu {
 
 nav#menu ol{
     position: relative;
+    left: 10px;
     list-style: none;
-    top: 30px;
+    top: 32px;
     
 }
 
@@ -97,7 +103,7 @@ nav#menu input#txtFld_pesquisar{
 
 div#divLogo img{
     position: relative;
-    top: -30px;
+    top: -15px;
     left: 150px; 
     width: 150px;
     height: 70px;
@@ -107,7 +113,7 @@ div#divLogo img{
 
 nav#menu div#divPesquisa{
   position: relative;
-  top: -75px;
+  top: -60px;
   left: 600px;  
   background-color: rgba(99, 97, 97, 0.692);;
   border:solid 1px;
@@ -116,10 +122,12 @@ nav#menu div#divPesquisa{
   height:30px;
 }
 
-nav#menu img#btnBusca{
+nav#menu #btnBusca{
     position: absolute;
+    height: 25px;
+    width: 25px;
     top: 3px;
-    left: 210px;  
+    left: 210px;
 }
 
 

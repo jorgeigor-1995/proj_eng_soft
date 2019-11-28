@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <main class="main-content">
+    <main id="bodyMain">
         <header>
             <!-- logo-->
             <!--    <li> <a href="/curriculo"> Meu curriculo</a> -->
@@ -36,7 +36,7 @@
                                     <a href="/sinopse/index/<%- filme._id %>?_method=PUT"> <img src=<%= filme.capa %> alt=<%= filme.nome %> > </a> 
                                 </div>
                                 <div class="data"> 
-                                    <h3><%= filme.nome %></h3>
+                                    <a href="/sinopse/index/<%= filme.id %>" class="link_data"><h3><%= filme.nome %></h3></a> 
                                 </div>
                             </article>
                         <% }); %>

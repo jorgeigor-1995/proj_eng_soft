@@ -9,7 +9,10 @@ module.exports = function (app) {
             Filmes.find({}, (err, response) => {
                 if (err) res.send(err);
                 res.render('home/index', {
-                    filmes: response
+                    filmes: response,
+                    results: false,
+                    search: '',
+
                 });
             })
         },
