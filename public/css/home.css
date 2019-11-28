@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-.main-content{
-    background-image: url("../_imagens/AdobeStock_197268654_Preview.jpeg");
-    background-repeat: no-repeat;
-   
-}
-
-
-
-#container{
-	margin: 0px auto 25px auto;
-    width: 1250px;/* 1250 */
-    height: 1000px;
-=======
 * {
     margin: 0;
     padding:0;
@@ -37,7 +23,6 @@
     background-color: rgba(99, 132, 150, 0.884);
     background-repeat: no-repeat;
     box-shadow: 2px 2px 2px rgba(167, 165, 165, 0.781);
->>>>>>> 3835d52339822bb8428bb6b8a0aea76ce5ce63d2
 }
 
 
