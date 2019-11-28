@@ -35,13 +35,29 @@
             
         </div>
 
-      </div>
+  <body>
+      <main>
+          <header>
+              <% include ../header.ejs %>
+          </header>
+          
+          <div class="quadro" id="container">
+            <div class="imagem"> 
+                  <img src=<%= filme.capa %> alt=<%= filme.nome %>>
+            </div>
+            <div class="sinopse"> 
+                <p>diretor(es): <%= filme.diretor %><br> </p>
+                <p>ano lancamento: <%= filme.ano %><br> </p>
+                <p>sinopse: <%= filme.sinopse %><br> </p>
+                
+            </div>
+          </div>
 
-        <footer>
-         <% include ../footer.ejs %>
-        </footer>
+          <footer>
+            <% include ../footer.ejs %>
+          </footer>
     </main>
-    
-</body>
+      
+  </body>
 
 </html>
