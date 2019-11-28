@@ -7,19 +7,25 @@ module.exports = function (app) {
         index: function (req, res) {
             const Filmes = mongoose.model("filme");
             Filmes.find({}, (err, response) => {
-                if(err) res.send(err);
+                if (err) res.send(err);
                 res.render('home/index', {
                     filmes: response
                 });
             })
         },
-        
+
 
         sinopse: function (req, res) {
-            res.render('sinopse/index');
-        }, 
-       
-    }; 
-    return HomeController;
-};
+            const Filme = mongoose.model("filme"); //
+            Filme.findOne({ 'capa': req.body.capa }, (err, response) => { //
+               // console.log(Filme.nome)
+                //  if(err) res.send(err);
+                res.render('sinopse/index', {
+                    filme: response
+                });
+            }) 
+    }
+}
+        return HomeController;
+    };
 

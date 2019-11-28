@@ -35,7 +35,9 @@
                         <% filmes.forEach(function(filme) { %>
                             <article class="movie"> 
                                 <div class="poster">
-                                    <img src=<%= filme.capa %> alt=<%= filme.nome %>>
+                                  <!--   <img src=<%= filme.capa %> alt=<%= filme.nome %> > -->
+
+                                    <a href="/sinopse/index"> <img src=<%= filme.capa %> alt=<%= filme.nome %> > </a> 
                                 </div>
                                 <div class="data"> 
                                     <h3><%= filme.nome %></h3>
