@@ -17,8 +17,7 @@ module.exports = function (app) {
 
         sinopse: function (req, res) {
             const Filme = mongoose.model("filme"); //
-            Filme.findOne({ 'capa': req.body.capa }, (err, response) => { //
-               // console.log(Filme.nome)
+            Filme.findOne({ '_id': req.params.id }, (err, response) => { //
                 //  if(err) res.send(err);
                 res.render('sinopse/index', {
                     filme: response

@@ -7,10 +7,10 @@ module.exports = function (express) {
         autor: { type: String, required: true },
         genero: { type: String, required: true },
         sinopse: { type: String, required: true },
-        nota: { type: String, required: true }, // tem que ser integer
+        //nota: { type: String, required: true }, // tem que ser integer
         ano: { type: String, required: true },
         paginas: { type: String, required: true }
     });
-    return global.db.models.livro || global.db.model('livro', livro);
+    return global.db.model('livro', livro);
 };
 */
