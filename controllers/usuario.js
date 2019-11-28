@@ -38,8 +38,8 @@ module.exports = function (app) {
 
                                     newUser.save()
                                         .then(() => {
-                                            //res.json({success: true, message: 'Usuario criado com sucesso', statusCode: 201 })
-                                            res.render('usuario/login');
+                                            res.render('usuario/create', { message: "Usuario criado com sucesso"});
+                                            //res.render('usuario/login');
                                         })
                                         .catch(err => res.json({success: false, message: err, statusCode:500}));
                                 })
@@ -80,7 +80,7 @@ module.exports = function (app) {
                     console.log(error);
                 });
             }else {
-                    res.render('usuario/login', { message: "Os campos de login são requisitados!"});
+                    res.render('usuario/login', { message: "Email ou senha incorreto!"});
             }
         }, 
 

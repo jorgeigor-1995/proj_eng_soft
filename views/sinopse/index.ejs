@@ -21,6 +21,7 @@
           <div class="quadro" id="container">
             <div class="imagem"> 
                   <img src=<%= filme.capa %> alt=<%= filme.nome %>>
+                  <p class="f_nome">   <%= filme.nome %> </p>
             </div>
             <div class="sinopse"> 
                 <p>diretor(es): <%= filme.diretor %><br> </p>
@@ -30,6 +31,14 @@
             </div>
           </div>
 
+        <div class="sinopse"> 
+    
+            <p>Diretor(es): <%= filme.diretor %><br> </p>
+            <p>Ano lancamento: <%= filme.ano %><br> </p>
+            <p>Sinopse: <br> <%= filme.sinopse %><br> </p>
+            
+        </div>
+      
           <footer>
             <% include ../footer.ejs %>
           </footer>

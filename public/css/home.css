@@ -7,7 +7,7 @@
     overflow: hidden;
     width: 100%; /* com isso imagem ocupará toda a largura da tela. Se colocarmos height: 100% também, a imagem irá distorcer */
     position: absolute;
-    background-image: url('https://i.ibb.co/vhHMcsk/51283wide.jpg');
+    background-image: url('https://i.ibb.co/34j5CgD/teste.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

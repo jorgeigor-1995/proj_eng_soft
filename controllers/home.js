@@ -18,28 +18,18 @@ module.exports = function (app) {
         },
 
 
-        sinopse: function (req, res, next) {
+        sinopse: function (req, res) {
+            let id = req.params.id;
+       //     console.log(id);
             const Filme = mongoose.model("filme"); //
-            Filme.findOne({ '_id': req.params.id }, (err, response) => { //
-                //  if(err) res.send(err);
-                res.render('sinopse/index', {
-                    filme: response
-                });
-            }) 
-        },
-        search: function (req, res) {
-            var searchParams = req.query.query.toUpperCase().split(' ');
-            console.log(searchParams);
-            const Filme = mongoose.model("filme");
-            filme.find({ 'nome': { $in: searchParams }}, function(e , docs){
-                res.render('home/search', { 
-                    results: true,
-                    search: req.query.query,
-                    list: docs
-                })
-            })
+            Filme.findById(id, function (err, response) { //
+                // console.log(Filme.nome)
+                if (err) res.send(err);
+                let resultado = { filme: response }
+                res.render('sinopse/index', resultado);
+            });
         }
-}
-        return HomeController;
-    };
+    }
+    return HomeController;
+};
 
