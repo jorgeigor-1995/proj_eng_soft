@@ -1,3 +1,7 @@
+#bodyMain {
+    height: 100%;
+}
+
 div#register{ /* para a div de cadastro de filmes*/
     position: absolute;
     margin-left: 300px;
