@@ -7,13 +7,19 @@ module.exports = function (app) {
         index: function (req, res) {
             const Filmes = mongoose.model("filme");
             Filmes.find({}, (err, response) => {
-                if (err) res.send(err);
-                res.render('home/index', {
-                    filmes: response,
-                    results: false,
-                    search: '',
-
-                });
+                if (err){ res.send(err);
+                }else{
+                    const Livros = mongoose.model("livro");
+                    Livros.find({}, (err, livro) => {
+                        res.render('home/index', {
+                            filmes: response,
+                            results: false,
+                            search: '',
+                            livro: livro
+                        });
+                    })
+                
+            }
             })
         },
 
@@ -21,12 +27,17 @@ module.exports = function (app) {
         sinopse: function (req, res) {
             let id = req.params.id;
        //     console.log(id);
+            const Livros = mongoose.model("livro");
             const Filme = mongoose.model("filme"); //
             Filme.findById(id, function (err, response) { //
                 // console.log(Filme.nome)
-                if (err) res.send(err);
+                if (err){ Livros.findById({id, function (erro, livro) {
+                    res.render('sinopse/index', { livro: livro});
+                }});
+                }else{
                 let resultado = { filme: response }
                 res.render('sinopse/index', resultado);
+                }
             });
         },
         search: function (req, res) {

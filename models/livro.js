@@ -1,4 +1,4 @@
-/*
+
 module.exports = function (express) {
     var Schema = require('mongoose').Schema;
     var livro = Schema({
@@ -9,8 +9,11 @@ module.exports = function (express) {
         sinopse: { type: String, required: true },
         //nota: { type: String, required: true }, // tem que ser integer
         ano: { type: String, required: true },
-        paginas: { type: String, required: true }
+        capa:{//Sava no banco o url da imagem
+            type: String,
+            require: true,
+            trim: true
+        }
     });
     return global.db.model('livro', livro);
 };
-*/

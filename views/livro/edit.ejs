@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update Filmes</title>
+    <link rel="icon"  href="https://i.ibb.co/5kX6vJr/tehei-icon.jpg" alt="tehei-icon">
+    <link rel='stylesheet' href='../css/filme.css' />
+    <link rel="stylesheet" href="../css/home.css" />
+
+
+</head>
+
+
+<body>
+    <main id="bodyMain">
+        <header>
+            <% include ../header.ejs %>
+        </header>
+        <section>
+            <div id="register">
+                <h1 class="title"> Atualizar Filme</h1>
+                <form  action="/usuario/filme/<%- filme._id %>?_method=PUT" method="POST">
+
+                    <div <% if(livro.id) %>>
+                            <input type="hidden" name="_method" value="PUT">
+                            <input type="hidden" id="id" name="id" value= <%= livro.id %>>
+                    </div>
+                    <label for="cNome"> Nome: </label><input id="cNome" class="txtFld_name" type="text" name="livro[nome]"
+                    value="<%- livro.nome %>" placeholder="Nome do livro">
+                    <br>
+                  
+                    <label for="cDiretor"> Diretor: </label><input id="cDiretor" class="txtFld_name" type="text" name="livro[autor]" value="<%- livro.autor %>" placeholder="Nome do autor do livro">
+                    <br>
+                   
+                    <label for="cGenero"> Genero: </label><input id="cGenero" class="txtFld_name" type="text" name="livro[genero]"
+                    value="<%- livro.genero %>" placeholder="O genero do livro">
+                    <br>
+
+                    <label for="cSinopse"> Sinopse: </label>
+                    <textarea cols="20" rows="10"  id="cSinopse" name="livro[sinopse]" class="txtFld_sinopse" type="text" placeholder="Sinopse do livro" ><%= livro.sinopse %></textarea>
+                    <br>
+
+                    <label for="cAno"> Ano: </label><input id="cAno" class="txtFld_name" type="text" name="livro[ano]"
+                    value="<%- livro.ano %>" placeholder="Ano do livro">
+                    <br>
+                    <label for="cImagem"> Imagem: </label><input id="cImagem" class="txtFld_name" type="text" name="livro[capa]"
+                    value="<%= livro.capa %>" placeholder="Url da imagem">
+                    <br>
+            
+                    <button class="btn_filme" type="submit">Atualizar</button>
+                    <button href="/usuario/logado" class="btn btn-warning">Cancelar</button>
+
+                </form>
+            </div>
+        </section>
+             
+    </main>
+    <footer>
+                <% include ../footer.ejs %>
+    </footer>
+   
+</body>
+
+</html>
