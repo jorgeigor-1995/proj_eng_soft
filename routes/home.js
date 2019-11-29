@@ -7,7 +7,7 @@ module.exports = app => {
  //   app.get('/sair', home.logout); // teste
     app.get('/filme/create', filme.create);
     app.get('/sinopse/index/:id',home.sinopse);
-    //app.get('/home/search', home.search);
+    app.get('/home/search', home.search);
     
 
 };

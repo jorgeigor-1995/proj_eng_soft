@@ -59,7 +59,6 @@ module.exports = function (app) {
                     return bcrypt.compare(req.body.senha, user.senha);
                 })
                 .then(function(samePassword) {
-                    console.log(String(samePassword));
                     if(!samePassword) {
                         res.render('usuario/login', { message: "Senha incorreta!"});
                         console.log("Senha incorreta");
@@ -68,8 +67,6 @@ module.exports = function (app) {
                         Usuario.findOne({'email': req.body.email}).then(function(user) {
                             req.session.usuario = user.nome;
                             res.render('usuario/logado', { usuario: user });
-                            console.log("A combinação email e senha são corretos!" );
-                            res.send();
                         })
                     
                     }
