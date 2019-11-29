@@ -9,8 +9,6 @@ module.exports = function (app) {
             });
         },
 
-
-
         create: function (req, res) {
             var dados = {
                 'nome' : req.body.livro.nome,
