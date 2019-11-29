@@ -3,23 +3,26 @@
     width: 900px;
     height: 400px;
     box-shadow: 2px 2px 3px 1px rgb(97, 92, 92);
+    background-color: rgba(133, 131, 131, 0.76);
     position: absolute; 
     display: flex;
     margin-left: 100px;
     padding: 1em;
 }
 
+
+
 .imagem{
-    margin-top: 50px;
+    margin-top: 40px;
     width: 240px;
     height: 320px;
 }
 
 .sinopse{
-    margin-top: 50px;
+    margin-top: 40px;
     flex-grow: 1;
     box-shadow: 2px 2px 3px rgb(97, 92, 92);
-    
+    background-color: rgba(90, 90, 90, 0.829);
     float: right;
     width: 500px;
     height: 320px;
