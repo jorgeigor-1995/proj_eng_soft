@@ -27,7 +27,7 @@
 }
 
 
-#topo {
+.topo {
     position: relative;
 	margin: 0px auto 25px auto;
     width: 950px;/* 1250 */
@@ -49,14 +49,15 @@
 
 
 h2{
-    width: 95px;/* 1250 */
+    width: 180px;/* 1250 */
     height: 30px;
     background-color:  rgb(0, 51, 75);
 	position: relative;
 	padding-left: 5px;
 	left: 15px;
 	top: 5px;
-	font-variant-position: 10px;
+    font-variant-position: 10px;
+    text-align: center;
 }
 
 .items{

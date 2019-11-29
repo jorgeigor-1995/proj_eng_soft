@@ -21,8 +21,8 @@
 
         <div class="container">
             
-            <header id="topo">
-                <h2>Sugestão</h2>
+            <header class="topo">
+                <h2>Sugestão Filmes</h2>
                 <span>
                     <a href="" class="see-all">Ver+</a>
                 </span>
@@ -41,6 +41,24 @@
                             </article>
                         <% }); %>
             </div>
+            <header class="topo">
+                    <h2>Sugestão Livros</h2>
+                    <span>
+                        <a href="" class="see-all">Ver+</a>
+                    </span>
+                </header>
+                <div class="items">
+                            <% livro.forEach(function(livro) { %>
+                                <article class="movie"> 
+                                    <div class="poster">
+                                        <a href="/sinopse/index/<%- livro._id %>?_method=PUT"> <img src=<%= livro.capa %> alt=<%= livro.nome %> > </a> 
+                                    </div>
+                                    <div class="data"> 
+                                        <a href="/sinopse/index/<%= livro.id %>" class="link_data"><h3><%= livro.nome %></h3></a> 
+                                    </div>
+                                </article>
+                            <% }); %>
+                </div>
         </div>
         
         <footer>

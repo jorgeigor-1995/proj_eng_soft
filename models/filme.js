@@ -22,6 +22,3 @@ module.exports = function (express) {
 }; 
 
 
-function findAll(callback){  
-    global.db.collection("filme").find({}).toArray(callback);
-}

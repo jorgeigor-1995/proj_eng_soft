@@ -2,6 +2,8 @@
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 const Usuario = mongoose.model('usuario');
+const Filme = mongoose.model('filme');
+const Livro = mongoose.model('livro');
 const { check, validationResult } = require('express-validator'); // aaaaa
 
 module.exports = function (app) {
@@ -64,10 +66,14 @@ module.exports = function (app) {
                         console.log("Senha incorreta");
                         
                     }else{
-                        Usuario.findOne({'email': req.body.email}).then(function(user) {
-                            req.session.usuario = user.nome;
-                            res.render('usuario/logado', { usuario: user });
-                        })
+                        Usuario.findOne({'email': req.body.email}, function(err, usuario) {
+                            req.session.usuario = usuario.nome;
+                            Filme.find({}, function(err, fims) {
+                                Livro.find({}, function (err, livro) {
+                                    res.render('usuario/logado', { usuario: usuario, filmes: fims, livros: livro });
+                                })                               
+                            });
+                        });
                     
                     }
                     
@@ -84,7 +90,11 @@ module.exports = function (app) {
         }, 
 
         logado: function (req, res) {
-            res.render('usuario/logado')
+                Filme.find({}, function(err, docs){
+                    Livro.find({}, function (erro, livro){
+                        res.render('usuario/logado', { filmes: docs, livros:livro });  
+                    })    
+                })                        
         },
 
         logout: function (req, res) {
