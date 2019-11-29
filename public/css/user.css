@@ -1,6 +1,5 @@
 header#cabecalho{
-    margin: -14px auto 30px auto;
-    
+    margin: -14px auto 30px auto;   
     height: 80px;
     background-repeat: no-repeat;
     
@@ -19,6 +18,13 @@ header#cabecalho img{ /* a imagem da lupa*/
 
 }
 
+#workspace {
+    width: 1250px;
+    height: 650px;
+    background-color: rgba(125, 154, 172, 0.644);
+    margin: auto auto 30px auto;
+}
+
 nav#menu {
   display: block;
 }
@@ -33,8 +39,7 @@ nav#menu ol{
 nav#menu li{
     position: relative;
     display: inline-block;
-    margin-right: 15px;
-    background-color:  rgba(18, 56, 68, 0.938);
+    background-color:  rgba(18, 56, 68, 0.932);
     color: white;
     padding: 4px;
     border-radius: 4px;
@@ -88,7 +93,7 @@ ul #user_menu {
 
 
 li.liMenu a{
-    background-color: #4169E1;
+    background-color: rgba(51, 94, 223, 0.795);
     width: 200px;
     display: block;
     color: #000;
@@ -101,6 +106,26 @@ li.liMenu a{
 li.liMenu a:hover {
     background-color: #00008B;
     color: white;
+}
+
+#user_nav{
+    position: relative;
+    top: 5px;
+    left: 10px;
+    float: left;
+    box-shadow: 2px 2px 2px rgba(167, 165, 165, 0.781);
+}
+
+#user_area{
+    text-align: center;
+    position: relative;
+    top: 5px;
+    left: 40px;
+    width: 950px;
+    height: 500px;
+    background-color: rgb(66, 106, 151);
+    float: left;
+    box-shadow: 2px 2px 2px rgba(167, 165, 165, 0.781);
 }
 
 

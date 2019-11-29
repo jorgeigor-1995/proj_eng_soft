@@ -28,6 +28,16 @@ module.exports = function (app) {
                 let resultado = { filme: response }
                 res.render('sinopse/index', resultado);
             });
+        },
+        search: function (req, res) {
+            const Filme = mongoose.model("filme");
+            var searchParams = req.query.query.toUpperCase();
+            var item = String(searchParams);
+            console.log(String(searchParams));
+            Filme.find({ }, function (e, docs) {
+                res.render('home/search', { list: docs, results: true, search: req.query.query })
+            });
+
         }
     }
     return HomeController;
