@@ -98,7 +98,7 @@ ul #user_menu {
 
 
 li.liMenu a{
-    background-color: rgba(51, 94, 223, 0.795);
+    background-color: rgb(26, 79, 104);
     width: 200px;
     display: block;
     color: #000;
@@ -109,7 +109,7 @@ li.liMenu a{
 
 /*Esse hover ira mudar a cor quando passar o mouse*/
 li.liMenu a:hover {
-    background-color: #00008B;
+    background-color: rgba(116, 125, 150, 0.795);
     color: white;
 }
 
@@ -137,9 +137,10 @@ li.liMenu a:hover {
     position: relative;
     left: 20px;
     bottom: 10px;
-    width: 500px;
+    width: 882px;
     height: 400px;
     background-color: rgba(192, 192, 192, 0.788);
+    padding: 1em;
 }
 
 #livro_edit{
@@ -169,11 +170,32 @@ table{
     height: 5px;
 }
 
+.liMenu{
+    border: 1px solid rgb(37, 37, 37);
+}
 
+.tdth_normal{
+    border: 1px solid rgb(37, 37, 37);
+}
 
+.btn_crud{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    font-size: 17px;
+    color: white;
+    background-color:  rgba(18, 56, 68, 0.938);
+    border-radius: 4px;
+    border: none;
+}
 
+.btn_crud:hover{
+    background-color:  rgba(31, 95, 114, 0.938);
+    box-shadow: 1px 1px 1px rgb(151, 147, 147);
+    transition: 1s;
+}
 
-
-
-
+#tabela{ /*de fora*/
+    border: 1px solid rgb(37, 37, 37);
+}
 

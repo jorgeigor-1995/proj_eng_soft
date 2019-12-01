@@ -4,18 +4,18 @@
 
 div#register{ /* para a div de cadastro de filmes*/
     position: absolute;
-    margin-left: 300px;
+    margin-left: 350px;
     margin-top: 50px;
-    width: 700px;
+    width: 600px;
     height: 400px;
-    background-color: rgba(100, 98, 98, 0.2);
+    background-color: rgba(51, 51, 51, 0.507);
     padding: 10px;
-    box-shadow: 1px 1px 1px rgb(151, 147, 147);
+    box-shadow: 1px 1px 1px rgba(15, 15, 15, 0.205);
 }
 
-.txtFld_name{ /*os txt de noem senha etc*/
+.filme_field{ /*os txt de noem senha etc*/
     align-items: flex-start;
-    margin-left: 60px;
+    margin-left: 20px;
     margin-top: 20px;
 }
 
@@ -54,21 +54,19 @@ div#register{ /* para a div de cadastro de filmes*/
     position: relative;
     right: 15px;
     width: 300px;
+    margin-bottom: 20px;
 }
 
-
-.txtFld_sinopse{ /*os txt de noem senha etc*/
-    margin-left: 60px;
-    margin-top: 20px;
-} 
-
-.btn_filme{
-    margin-top: 15px;
-    margin-left: 300px;
+.btn_confirm{
     width: 120px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
 }
 
 .title{
-    margin-left: 300px;
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
 
 }

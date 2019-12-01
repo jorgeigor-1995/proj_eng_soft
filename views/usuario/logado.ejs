@@ -22,8 +22,8 @@
                 <nav id="menu">
                     <ol>
                         <li> <a href="/"> HOME </a> </li>
-                        <li id="btn_login"> <a href="/usuario/sair"> Sair </a> </li>
-                        <li > <a>  Bem - vindo </a> </li>
+                        <li id="btn_login"> <a href="/usuario/sair"> Sign Out </a> </li>
+                        <li id="user_welcome"> <a>  Bem - vindo: <%= usuario.nome %> </a> </li>
                     </ol>
                 
                 <!--  <img src="_imagens/loupe.png">  AQUI VAI UM ONCLICK--> 
@@ -48,16 +48,16 @@
                             <thead>
                                 <th class="del"></th>
                                 <th class="edit"></th>
-                                <th class="tdth_normal">nome</th>
-                                <th class="tdth_normal">diretor</th>
-                                <th class="tdth_normal">genero</th>
-                                <th class="tdth_normal">ano</th>
+                                <th class="tdth_normal">Nome</th>
+                                <th class="tdth_normal">Diretor</th>
+                                <th class="tdth_normal">Genero</th>
+                                <th class="tdth_normal">Ano</th>
                             </thead>
                             <tbody>
                                 <% filmes.forEach(function(filme) { %>
-                                    <tr>
-                                        <th class="del"><a href="filme/<%= filme.id %>"><button>del</button></a></th>
-                                        <th class="edit"><a href="filme/edit/<%= filme.id %>"><button>edit</button></a></th>
+                                    <tr class="tss">
+                                        <th class="del"><a href="filme/<%= filme.id %>"><button class="btn_crud">DEL</button></a></th>
+                                        <th class="edit"><a href="filme/edit/<%= filme.id %>"><button class="btn_crud">EDIT</button></a></th>
                                         <td class="tdth_normal"><%= filme.nome %></td>
                                         <td class="tdth_normal"><%= filme.diretor %></td>
                                         <td class="tdth_normal"><%= filme.genero %></td>
@@ -83,8 +83,8 @@
                                 <tbody>
                                     <% livros.forEach(function(livro) { %>
                                         <tr>
-                                            <th class="del"><a href="livro/<%= livro.id %>"><button>del</button></a></th>
-                                            <th class="edit"><a href="livro/edit/<%= livro.id %>"><button>edit</button></a></th>
+                                            <th class="del"><a href="livro/<%= livro.id %>"><button class="btn_crud">DEL</button></a></th>
+                                            <th class="edit"><a href="livro/edit/<%= livro.id %>"><button class="btn_crud">EDIT</button></a></th>
                                             <td class="tdth_normal"><%= livro.nome %></td>
                                             <td class="tdth_normal"><%= livro.autor %></td>
                                             <td class="tdth_normal"><%= livro.genero %></td>
