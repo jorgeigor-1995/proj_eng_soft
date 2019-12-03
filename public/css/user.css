@@ -1,5 +1,5 @@
 #tela{
-    height: 2000px;
+    height: 760px;
 }
 
 
@@ -98,7 +98,7 @@ ul #user_menu {
 
 
 li.liMenu a{
-    background-color: rgb(26, 79, 104);
+    background-color: rgb(66, 106, 151);
     width: 200px;
     display: block;
     color: #000;
@@ -127,7 +127,7 @@ li.liMenu a:hover {
     top: 5px;
     left: 40px;
     width: 950px;
-    height: 1250px;
+    height: 658px;
     background-color: rgb(66, 106, 151);
     float: left;
     box-shadow: 2px 2px 2px rgba(167, 165, 165, 0.781);
@@ -135,28 +135,29 @@ li.liMenu a:hover {
 
 #filme_edit{
     position: relative;
-    left: 20px;
+    
     bottom: 10px;
-    width: 882px;
+    margin-top: 20px;
+    width: 800px;
     height: 400px;
-    background-color: rgba(192, 192, 192, 0.788);
     padding: 1em;
 }
 
 #livro_edit{
     position: relative;
-    left: 20px;
+    
     bottom: 10px;
-    width: 500px;
+    margin-top: 20px;
+    width: 800px;
     height: 400px;
-    background-color: rgba(192, 192, 192, 0.788);
+    padding: 1em;
 }
 
 table{
     position: relative;
     left: 35px;
     border: 5px;
-    border-color: #000;
+    border-color: rgb(75, 74, 74);
     overflow: auto;
 }
 
@@ -171,7 +172,7 @@ table{
 }
 
 .liMenu{
-    border: 1px solid rgb(37, 37, 37);
+    border: 1px solid rgba(255, 255, 255, 0.274);
 }
 
 .tdth_normal{
@@ -199,3 +200,62 @@ table{
     border: 1px solid rgb(37, 37, 37);
 }
 
+/**/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+*{
+		margin: 0;
+		padding: 0;
+}
+
+
+.nav_tabs{
+		width: 900px;
+		height: 600px;
+		margin: 30px auto;
+		background-color: #fff;
+		position: relative;
+}
+
+.nav_tabs ul{
+		list-style: none;
+}
+
+.nav_tabs ul li{
+		float: left;
+}
+
+.tab_label{
+		display: block;
+		width: 100px;
+		background-color: #363b48;
+		padding: 25px;
+		font-size: 20px;
+		color:#fff;
+		cursor: pointer;
+		text-align: center;
+}
+
+
+.nav_tabs .rd_tab { 
+	display:none;
+	position: absolute;
+}
+
+.nav_tabs .rd_tab:checked ~ label { 
+	background-color: #356b9ece;
+	color:#fff;}
+
+.tab-content{
+	border-top: solid 5px #336dd8dc;
+	background-color: #fff;
+	display: none;
+	position: absolute;
+	height: 320px;
+	width: 600px;
+	left: 0;	
+}
+
+.rd_tab:checked ~ .tab-content{
+	display: block;
+}

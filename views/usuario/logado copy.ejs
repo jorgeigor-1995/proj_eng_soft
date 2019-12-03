@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tehei</title>
+    <link rel="icon"  href="https://i.ibb.co/5kX6vJr/tehei-icon.jpg" alt="tehei-icon">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.3.1/jquery.quicksearch.js"></script>
+    <link rel='stylesheet' href='../css/user.css' type="text/css"/>
+    <link rel="stylesheet" href="../css/home.css" type="text/css"/>
+    
+</head>
+
+<body>
+   <main id="bodyMain">
+       <div id="tela">
+            <header id="cabecalho">
+                <nav id="menu">
+                    <ol>
+                        <li> <a href="/"> HOME </a> </li>
+                        <li id="btn_login"> <a href="/usuario/sair"> Sign Out </a> </li>
+                        <li id="user_welcome"> <a>  Bem - vindo: <%= usuario.nome %> </a> </li>
+                    </ol>
+                
+                <!--  <img src="_imagens/loupe.png">  AQUI VAI UM ONCLICK--> 
+                </nav>
+            </header>
+            <div id="workspace">
+                <nav id="user_nav">
+                    <ul id:"user_menu">
+                        <li class="liMenu"><a href="/">Home</a></li>
+                        <li class="liMenu"><a href="../../filme/create">Adicionar Filme</a></li>
+                        <li class="liMenu"><a href="../../livro/create">Adicionar Livro</a></li>
+                        <li class="liMenu"><a href="/usuario/sair">Sair</a></li>
+                    </ul>
+                </nav>
+                <div class="user_area">
+                    <header class="topo">
+                        <h2>Filmes</h2>
+                    </header>
+                                
+                    <div id="filme_edit">
+                        <table id="tabela" class="table table-hover">
+                            <thead>
+                                <th class="del"></th>
+                                <th class="edit"></th>
+                                <th class="tdth_normal">Nome</th>
+                                <th class="tdth_normal">Diretor</th>
+                                <th class="tdth_normal">Genero</th>
+                                <th class="tdth_normal">Ano</th>
+                            </thead>
+                            <tbody>
+                                <% filmes.forEach(function(filme) { %>
+                                    <tr class="tss">
+                                        <th class="del"><a href="filme/<%= filme.id %>"><button class="btn_crud">DEL</button></a></th>
+                                        <th class="edit"><a href="filme/edit/<%= filme.id %>"><button class="btn_crud">EDIT</button></a></th>
+                                        <td class="tdth_normal"><%= filme.nome %></td>
+                                        <td class="tdth_normal"><%= filme.diretor %></td>
+                                        <td class="tdth_normal"><%= filme.genero %></td>
+                                        <td class="tdth_normal"><%= filme.ano %></td>
+                                    </tr>
+                                <% }); %>
+                            </tbody>
+                        </table>
+                    </div>
+                    <header class="topo">
+                            <h2>Livros</h2>
+                    </header>
+
+
+                    <div id="livro_edit">
+                            <table id="tabela" class="table table-hover">
+                                <thead>
+                                    <th class="del"></th>
+                                    <th class="edit"></th>
+                                    <th class="tdth_normal">nome</th>
+                                    <th class="tdth_normal">diretor</th>
+                                    <th class="tdth_normal">genero</th>
+                                    <th class="tdth_normal">ano</th>
+                                </thead>
+                                <tbody>
+                                    <% livros.forEach(function(livro) { %>
+                                        <tr>
+                                            <th class="del"><a href="livro/<%= livro.id %>"><button class="btn_crud">DEL</button></a></th>
+                                            <th class="edit"><a href="livro/edit/<%= livro.id %>"><button class="btn_crud">EDIT</button></a></th>
+                                            <td class="tdth_normal"><%= livro.nome %></td>
+                                            <td class="tdth_normal"><%= livro.autor %></td>
+                                            <td class="tdth_normal"><%= livro.genero %></td>
+                                            <td class="tdth_normal"><%= livro.ano %></td>
+                                        </tr>
+                                    <% }); %>
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </main>
+<footer>
+    <% include ../footer.ejs %>
+</footer>
+</body>
+
+</html>

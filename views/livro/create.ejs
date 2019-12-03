@@ -25,29 +25,34 @@
                 <form action="/livro/create" method="POST">
 
                     
-                    <label for="cNome"> Nome: </label><input id="cNome" class="txtFld_name" type="text" name="livro[nome]"
+                    <label for="cNome"> Nome: </label><input id="cNome" class="filme_field" type="text" name="livro[nome]"
                      placeholder="Nome do livro">
                     <br>
                   
-                    <label for="cDiretor"> Autor: </label><input id="cDiretor" class="txtFld_name" type="text" name="livro[autor]" placeholder="Nome do autor do livro">
+                    <label for="cDiretor"> Autor: </label><input id="cDiretor" class="filme_field" type="text" name="livro[autor]" placeholder="Nome do autor do livro">
                     <br>
                    
-                    <label for="cGenero"> Genero: </label><input id="cGenero" class="txtFld_name" type="text" name="livro[genero]"
+                    <label for="cGenero"> Genero: </label><input id="cGenero" class="filme_field" type="text" name="livro[genero]"
                         placeholder="O genero do livro">
                     <br>
 
                     <label for="cSinopse"> Sinopse: </label>
-                    <textarea cols="20" rows="10"  id="cSinopse" name="livro[sinopse]" class="txtFld_sinopse" type="text" placeholder="Sinopse do filme" ></textarea>
+                    <textarea cols="20" rows="10"  id="cSinopse" name="livro[sinopse]" class="filme_field" type="text" placeholder="Sinopse do filme" ></textarea>
                     <br>
 
-                    <label for="cAno"> Ano: </label><input id="cAno" class="txtFld_name" type="text" name="livro[ano]"
+                    <label for="cAno"> Ano: </label><input id="cAno" class="filme_field" type="text" name="livro[ano]"
                      placeholder="Ano do filme">
                     <br>
-                    <label for="cImagem"> Imagem: </label><input id="cImagem" class="txtFld_name" type="text" name="livro[capa]"
+                    <label for="cImagem"> Imagem: </label><input id="cImagem" class="filme_field" type="text" name="livro[capa]"
                      placeholder="Url da imagem">
                     <br>
             
-                    <button class="btn_filme" type="submit">Confirmar </button>
+                    <table id="tabela" class="table" >
+                        <thead>
+                            <th> <button class="btn_filme" type="submit">Confirmar </button> </th>
+                            <th> <button class="btn_filme" type="submit"> Cancelar  </button> </th>
+                        </thead>
+                    </table>
 
                 </form>
             </div>
