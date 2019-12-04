@@ -92,7 +92,7 @@ module.exports = function (app) {
         logado: function (req, res) {
                 Filme.find({}, function(err, docs){
                     Livro.find({}, function (erro, livro){
-                        res.render('usuario/logado', { filmes: docs, livros:livro });  
+                            res.render('usuario/logado', { filmes: docs, livros:livro });  
                     })    
                 })                        
         },

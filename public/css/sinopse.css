@@ -31,10 +31,16 @@
 
 
 .imagem{
+    margin-left: 5px;
     margin-top: 40px;
     width: 220px;
     height: 320px;
 
+}
+
+.imagem img{
+    width: 200px;
+    height: 280px;
 }
 
 .sinopse{

@@ -9,6 +9,16 @@ module.exports = function (app) {
             });
         },
 
+        sinopse: function (req, res) {
+            let id = req.params.id;
+       //     console.log(id);
+            Filme.findById(id, function (err, response) { //
+                // console.log(Filme.nome)
+                let resultado = { filme: response }
+                res.render('filme/sinopse/index', resultado);
+                }
+            );
+        },
 
 
         create: function (req, res) {

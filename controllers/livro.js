@@ -91,6 +91,18 @@ module.exports = function (app) {
                     }                       
                 })
         },
+
+        sinopse: function (req, res) {
+            let id = req.params.id;
+       //     console.log(id);
+            Livro.findById(id, function (err, response) { //
+                // console.log(Filme.nome)
+                let resultado = { livro: response }
+                res.render('livro/sinopse/index', resultado);
+                }
+            );
+        },
+
         validate: [
             check('livro[nome]', 'Campo nome é obrigatório').not().isEmpty(),
             check('livro[ano]', 'Campo sinopse é obrigatório').not().isEmpty()

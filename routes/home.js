@@ -8,7 +8,8 @@ module.exports = app => {
  //   app.get('/sair', home.logout); // teste
     app.get('/filme/create', filme.store);
     app.get('/livro/create', livro.store);
-    app.get('/sinopse/index/:id',home.sinopse);
+    app.get('/filme/sinopse/index/:id',filme.sinopse);
+    app.get('/livro/sinopse/index/:id',livro.sinopse);
     app.get('/home/search', home.search);
     
 

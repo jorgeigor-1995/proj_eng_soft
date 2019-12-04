@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Update Livro</title>
     <link rel="icon"  href="https://i.ibb.co/5kX6vJr/tehei-icon.jpg" alt="tehei-icon">
-    <link rel='stylesheet' href='../css/filme.css' />
-    <link rel="stylesheet" href="../css/home.css" />
+    <link rel='stylesheet' href='/css/filme.css' />
+    <link rel="stylesheet" href="/css/home.css" />
 
 
 </head>
@@ -50,8 +50,12 @@
                     value="<%= filme.capa %>" placeholder="Url da imagem">
                     <br>
             
-                    <button class="btn_filme" type="submit">Atualizar</button>
-                    <button href="/usuario/logado" class="btn btn-warning">Cancelar</button>
+                    <table id="tabela" class="table" >
+                        <thead>
+                            <th> <button class="btn_filme" type="submit">Atualizar </button> </th>
+                            <th> <button class="btn_filme" href="../usuario/logado"> Cancelar  </button> </th>
+                        </thead>
+                    </table>
 
                 </form>
             </div>

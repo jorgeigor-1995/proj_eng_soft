@@ -135,21 +135,21 @@ li.liMenu a:hover {
 
 #filme_edit{
     position: relative;
-    
-    bottom: 10px;
+    background-color: #356b9ece ;
+    bottom: 20px;
     margin-top: 20px;
-    width: 800px;
-    height: 400px;
+    width: 870px;
+    height: 600px;
     padding: 1em;
 }
 
 #livro_edit{
     position: relative;
-    
-    bottom: 10px;
+    background-color: #356b9ece ;
+    bottom: 20px;
     margin-top: 20px;
-    width: 800px;
-    height: 400px;
+    width: 870px;
+    height: 600px;
     padding: 1em;
 }
 
@@ -213,7 +213,7 @@ table{
 		width: 900px;
 		height: 600px;
 		margin: 30px auto;
-		background-color: #fff;
+		background-color :rgb(66, 106, 151);
 		position: relative;
 }
 
@@ -243,7 +243,7 @@ table{
 }
 
 .nav_tabs .rd_tab:checked ~ label { 
-	background-color: #356b9ece;
+	background-color: #264b6ece;
 	color:#fff;}
 
 .tab-content{

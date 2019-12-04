@@ -8,30 +8,30 @@
         <link rel="icon"  href="https://i.ibb.co/5kX6vJr/tehei-icon.jpg" alt="tehei-icon">
         <link rel='stylesheet' href='/css/sinopse.css' type="text/css"/>
        
-        <title><%= filme.nome %></title>
+        <title><%= livro.nome %></title>
       
     </head>
 
   <body>
       <main id="bodyMain">
           <header>
-              <% include ../header.ejs %>
+              <% include ../../header.ejs %>
           </header>
           
           <div class="quadro" id="container">
             <div class="imagem"> 
-                  <img src=<%= filme.capa %> alt=<%= filme.nome %>>
-                  <p class="f_nome">   <%= filme.nome %> </p>
+                  <img src=<%= livro.capa %> alt=<%= livro.nome %>>
+                  <p class="f_nome">   <%= livro.nome %> </p>
             </div>
             <div class="sinopse"> 
-                <p>Diretor(es): <%= filme.diretor %><br> </p>
-                <p>Ano lancamento: <%= filme.ano %><br> </p>
-                <p>Sinopse: <%= filme.sinopse %><br> </p>
+                <p>Autor(es): <%= livro.autor %><br> </p>
+                <p>Ano lancamento: <%= livro.ano %><br> </p>
+                <p>Sinopse: <%= livro.sinopse %><br> </p>
                 
             </div>
         
             <footer>
-              <% include ../footer.ejs %>
+              <% include ../../footer.ejs %>
             </footer>
       </main>
         
