@@ -17,13 +17,12 @@
 
 
 .quadro{
-    width: 900px;
+    width: 967px;
     height: 400px;
     background-color: rgba(2, 2, 2, 0.76);
     box-shadow: 2px 2px 3px 1px rgb(17, 17, 17);
     position: absolute; 
     display: flex;
-    margin-left: 100px;
     padding: 1em;
 }
 

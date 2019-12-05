@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="icon"  href="https://i.ibb.co/5kX6vJr/tehei-icon.jpg" alt="tehei-icon">
         <link rel='stylesheet' href='/css/sinopse.css' type="text/css"/>
-       
+        <link rel="stylesheet" href="/css/home.css" type="text/css"/>
         <title><%= filme.nome %></title>
       
     </head>
@@ -17,8 +17,8 @@
           <header>
               <% include ../../header.ejs %>
           </header>
-          
-          <div class="quadro" id="container">
+          <div class="container">
+          <div class="quadro">
             <div class="imagem"> 
                   <img src=<%= filme.capa %> alt=<%= filme.nome %>>
                   <p class="f_nome">   <%= filme.nome %> </p>
@@ -29,7 +29,8 @@
                 <p>Sinopse: <%= filme.sinopse %><br> </p>
                 
             </div>
-        
+          </div>
+          </div>
             <footer>
               <% include ../../footer.ejs %>
             </footer>
