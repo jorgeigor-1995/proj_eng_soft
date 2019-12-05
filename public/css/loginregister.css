@@ -1,7 +1,12 @@
+#bodyMain {
+    height: 100%;
+}
+
 #tela {
     position: relative;
     height: 550px;
 }
+
 
 div#register{ /* para a div de registro e para a div de login*/
     margin: 85px auto -10px auto;
