@@ -77,8 +77,6 @@ h2{
 .items{
     position: relative;
     bottom: 20px;
-    
-    
     box-shadow: inset 1px 1px rgb(177, 176, 175);
 	margin: auto auto 0 auto;
     width: 950px;/* 1250 */

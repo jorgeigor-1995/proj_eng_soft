@@ -67,7 +67,8 @@ module.exports = function (app) {
                         
                     }else{
                         Usuario.findOne({'email': req.body.email}, function(err, usuario) {
-                            req.session.usuario = usuario.nome;
+                           
+                            req.session.usuario = usuario.nome//
                             Filme.find({}, function(err, fims) {
                                 Livro.find({}, function (err, livro) {
                                     res.render('usuario/logado', { usuario: usuario, filmes: fims, livros: livro });

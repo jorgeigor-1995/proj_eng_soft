@@ -259,3 +259,14 @@ table{
 .rd_tab:checked ~ .tab-content{
 	display: block;
 }
+
+
+.user_welcome{ /*nome do suaurio*/
+   background-color: rgba(252, 104, 50, 0.082);
+   position: relative;
+   width: fit-content;
+   border-radius: 2px;
+   color: rgb(80, 24, 4);
+   font-size: 17px;
+   left: 195px;
+}

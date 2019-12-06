@@ -22,39 +22,39 @@
         <section>
             <div id="container-cads">
                 <div id="register">
-                    <h1 class="title">Atualizar Livro</h1>
+                    <h1 class="title">Atualizar Filme</h1>
                     <form  action="/usuario/filme/<%- filme._id %>?_method=PUT" method="POST">
 
                         <div <% if(filme.id) %>>
                                 <input type="hidden" name="_method" value="PUT">
                                 <input type="hidden" id="id" name="id" value= <%= filme.id %>>
                         </div>
-                        <label for="cNome"> Nome: </label><input id="cNome" class="txtFld_name" type="text" name="filme[nome]"
+                        <label for="cNome"> Nome: </label><input id="cNome" class="filme_field" type="text" name="filme[nome]"
                         value="<%- filme.nome %>" placeholder="Nome do filme">
                         <br>
                     
-                        <label for="cDiretor"> Diretor: </label><input id="cDiretor" class="txtFld_name" type="text" name="filme[diretor]" value="<%- filme.diretor %>" placeholder="Nome do diretor do filme">
+                        <label for="cDiretor"> Diretor: </label><input id="cDiretor" class="filme_field" type="text" name="filme[diretor]" value="<%- filme.diretor %>" placeholder="Nome do diretor do filme">
                         <br>
                     
-                        <label for="cGenero"> Genero: </label><input id="cGenero" class="txtFld_name" type="text" name="filme[genero]"
+                        <label for="cGenero"> Genero: </label><input id="cGenero" class="filme_field" type="text" name="filme[genero]"
                         value="<%- filme.genero %>" placeholder="O genero do filme">
                         <br>
 
                         <label for="cSinopse"> Sinopse: </label>
-                        <textarea cols="20" rows="10"  id="cSinopse" name="filme[sinopse]" class="txtFld_sinopse" type="text" placeholder="Sinopse do filme" ><%= filme.sinopse %></textarea>
+                        <textarea cols="20" rows="10"  id="cSinopse" name="filme[sinopse]" class="filme_field" type="text" placeholder="Sinopse do filme" ><%= filme.sinopse %></textarea>
                         <br>
 
-                        <label for="cAno"> Ano: </label><input id="cAno" class="txtFld_name" type="text" name="filme[ano]"
+                        <label for="cAno"> Ano: </label><input id="cAno" class="filme_field" type="text" name="filme[ano]"
                         value="<%- filme.ano %>" placeholder="Ano do filme">
                         <br>
-                        <label for="cImagem"> Imagem: </label><input id="cImagem" class="txtFld_name" type="text" name="filme[capa]"
+                        <label for="cImagem"> Imagem: </label><input id="cImagem" class="filme_field" type="text" name="filme[capa]"
                         value="<%= filme.capa %>" placeholder="Url da imagem">
                         <br>
                 
                         <table id="tabela" class="table" >
                             <thead>
                                 <th> <button class="btn_filme" type="submit">Atualizar </button> </th>
-                                <th> <button class="btn_filme" href="../usuario/logado"> Cancelar  </button> </th>
+                                <th> <a  class="btn_filme" href="javascript:history.back()">Cancelar </a> </th>
                             </thead>
                         </table>
 
