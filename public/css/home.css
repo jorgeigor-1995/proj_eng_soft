@@ -83,12 +83,12 @@ h2{
     box-shadow: inset 1px 1px rgb(177, 176, 175);
 	margin: auto auto 0 auto;
     width: 950px;/* 1250 */
-    height: 400px;
+    height: 425px;
 }
 
 .movie{
     position: relative;
-    margin: 10px 8px 10px 5px;
+    margin: 10px 8px 25px 5px;
     width: 140px;
     height: 180px;
     background-color: slategray;
