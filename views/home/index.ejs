@@ -19,51 +19,49 @@
             <% include ../header.ejs %>
         </header>
 
-        <div class="container">
-            
-            <header class="topo">
-                <h2>Filmes</h2>
-                <span>
-                    <a href="" class="see-all">Ver+</a>
-                </span>
-            </header>
-            <div class="items">
-                        <% filmes.forEach(function(filme) { %>
-                            <article class="movie"> 
-                                <div class="poster">
-                                  <!--   <img src=<%= filme.capa %> alt=<%= filme.nome %> > -->
-
-                                    <a href="/filme/sinopse/index/<%- filme._id %>?_method=PUT"> <img src=<%= filme.capa %> alt=<%= filme.nome %> > </a> 
-                                </div>
-                                <div class="data"> 
-                                    <a href="/filme/sinopse/index/<%= filme.id %>" class="link_data"><h3><%= filme.nome %></h3></a> 
-                                </div>
-                            </article>
-                        <% }); %>
-            </div>
-            <header class="topo">
-                    <h2 class="tittle_segestion">Livros </h2>
-                    <span>
-                        <a href="" class="see-all">Ver+</a>
-                    </span>
+        <div id='divBody'>
+            <div class="container">
+                
+                <header class="topo">
+                    <h2>Filmes</h2>
+                    
                 </header>
                 <div class="items">
-                            <% livro.forEach(function(livro) { %>
+                            <% filmes.forEach(function(filme) { %>
                                 <article class="movie"> 
                                     <div class="poster">
-                                        <a href="/livro/sinopse/index/<%- livro._id %>?_method=PUT"> <img src=<%= livro.capa %> alt=<%= livro.nome %> > </a> 
+                                    <!--   <img src=<%= filme.capa %> alt=<%= filme.nome %> > -->
+
+                                        <a href="/filme/sinopse/index/<%- filme._id %>?_method=PUT"> <img src=<%= filme.capa %> alt=<%= filme.nome %> > </a> 
                                     </div>
                                     <div class="data"> 
-                                        <a href="/livro/sinopse/index/<%= livro.id %>" class="link_data"><h3><%= livro.nome %></h3></a> 
+                                        <a href="/filme/sinopse/index/<%= filme.id %>" class="link_data"><h3><%= filme.nome %></h3></a> 
                                     </div>
                                 </article>
                             <% }); %>
                 </div>
+                <header class="topo">
+                        <h2 class="tittle_segestion">Livros </h2>
+                        
+                    </header>
+                    <div class="items">
+                                <% livro.forEach(function(livro) { %>
+                                    <article class="movie"> 
+                                        <div class="poster">
+                                            <a href="/livro/sinopse/index/<%- livro._id %>?_method=PUT"> <img src=<%= livro.capa %> alt=<%= livro.nome %> > </a> 
+                                        </div>
+                                        <div class="data"> 
+                                            <a href="/livro/sinopse/index/<%= livro.id %>" class="link_data"><h3><%= livro.nome %></h3></a> 
+                                        </div>
+                                    </article>
+                                <% }); %>
+                    </div>
+            </div>
+            <footer>
+                    <% include ../footer.ejs %>
+            </footer>
         </div>
         
-        <footer>
-            <% include ../footer.ejs %>
-        </footer>
     </main>
 
 </body>
