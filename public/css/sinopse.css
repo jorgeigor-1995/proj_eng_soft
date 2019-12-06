@@ -48,10 +48,11 @@
     flex-grow: 1;
     padding: 5px;
     box-shadow: 1px 1px 3px 1px rgba(146, 146, 146, 0.514);
-    
+    color: rgba(255, 255, 255, 0.74);
     float: right;
     width: 500px;
     height: 280px;
+    font-size: 18px;
 }
 
 .f_nome{
